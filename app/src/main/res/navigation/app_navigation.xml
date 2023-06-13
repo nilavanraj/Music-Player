@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:startDestination="@id/FirstBoard"
+    android:id="@+id/app_navigation">
+
+    <fragment
+        android:id="@+id/dashboard"
+        android:name="com.example.locationalert.Dashboard"
+        android:label="Dashboard">
+    </fragment>
+
+    <fragment android:id="@+id/FirstBoard"
+        android:name="com.example.locationalert.onboarding.FirstBoard"
+        android:label="fragment_my_home"
+        >
+        <action android:id="@+id/action_FirstBoard"
+            app:destination="@id/SecondBoard"
+            app:enterAnim="@anim/slide_right"
+            app:exitAnim="@anim/slide_left"
+            />
+    </fragment>
+
+    <fragment android:id="@+id/SecondBoard"
+        android:name="com.example.locationalert.onboarding.SecondBoard"
+        android:label="fragment_my_home"
+        >
+        <action android:id="@+id/action_SecondBoard"
+            app:destination="@id/dashboard"
+            app:enterAnim="@anim/slide_right"
+            app:exitAnim="@anim/slide_left"
+            />
+    </fragment>
+
+
+
+
+</navigation>
